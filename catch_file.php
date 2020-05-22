@@ -41,9 +41,9 @@ if($_FILES['upload']['error']==0){  // error=0 表示沒有發生錯誤
   // move_uploaded_file($_FILES['upload']['tmp_name'],"img/".$_FILES['upload']['name']);
   // 將圖片上傳至同資料夾的"img"內，並將檔案重新命名成上傳時間
   move_uploaded_file($_FILES['upload']['tmp_name'],"img/".$name);
-}
 
-header("location:upload.php?filename=$name");
+  header("location:upload.php?filename=$name");
+}
 
 ?>
 

@@ -1,10 +1,11 @@
 <?php
 
 $dsn="mysql:host=localhost;chatset=utf8;dbname=file";
-$pdo=new PDO();
+$pdo=new PDO($dsn,"root","");
 date_default_timezone_set("Asia/Taipei");
 
 
+// 先打出all後 下面的幾乎都可以用all來改
 function all($table,...$arg){
   global $pdo;
 
@@ -14,7 +15,7 @@ function all($table,...$arg){
       // $tmp[]="`$key`=''$value";
       $tmp[]=sprintf("`%s`='%s'",$key,$value);
     }
-    $sql=$sql . " where " . implode(" && ",tmp);
+    $sql=$sql . " where " . implode(" && ",$tmp);
   }
 
   if(!empty($arg[1])){
@@ -33,12 +34,12 @@ function find($table,$arg){
     foreach($arg as $key => $value){
       $tmp[]=sprintf("`%s`='%s'",$key,$value);
     }
-    $sql=$sql . " where ".implode(" && ",tmp);
+    $sql=$sql . " where " . implode(" && ",tmp);
   }else{
     $sql=$sql . " where id='" . $arg."'";
   }
 
-  return $pdo->query($sql)->fetch();
+  return $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
 }
 
 
@@ -88,7 +89,7 @@ function save($table,$arg){
 function del($table,$arg){
   global $pdo;
 
-  $sql="select * from $table ";
+  $sql="delete from $table ";
   if(!empty($arg) && is_array($arg)){
     foreach($arg as $key => $value){
       $tmp[]=sprintf("`%s`='%s'",$key,$value);
@@ -99,7 +100,6 @@ function del($table,$arg){
   }
 
   return $pdo->exec($sql);
-
 }
 function q($sql){
   global $pdo;
@@ -108,7 +108,6 @@ function q($sql){
 }
 function to($url){
   header("location:".$url);
-
 }
 
 ?>
