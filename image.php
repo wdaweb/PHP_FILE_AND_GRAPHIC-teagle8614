@@ -24,7 +24,14 @@
 <h1 class="header">圖形處理練習</h1>
 <!---建立檔案上傳機制--->
 <form action="graphic.php" method="post" enctype="multipart/form-data">
-  <input type="file" name="pic">
+	檔案:<input type="file" name="pic" id="img"><br>
+	說明:<input type="text" name="note"><br>
+	相簿:
+	<select name="album" id="">
+		<option value="1">美食</option>
+		<option value="2">旅遊</option>
+		<option value="3">寵物</option>
+	</select><br>
 	<input type="submit" value="上傳">
 </form>
 

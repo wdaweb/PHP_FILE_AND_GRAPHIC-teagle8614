@@ -24,7 +24,7 @@ include_once "base.php";
 	檔案:<input type="file" name="upload" id="img"><br>
 	說明:<input type="text" name="note"><br>
 	相簿:
-	<select name="" id="">
+	<select name="album" id="">
 		<option value="1">美食</option>
 		<option value="2">旅遊</option>
 		<option value="3">寵物</option>
