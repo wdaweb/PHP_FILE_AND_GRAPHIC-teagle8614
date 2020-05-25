@@ -23,7 +23,7 @@
 <body>
 <h1 class="header">圖形處理練習</h1>
 <!---建立檔案上傳機制--->
-<form action="graphic.php" method="post" enctype="multipart/form-data">
+<form action="graphic3.php" method="post" enctype="multipart/form-data">
 	檔案:<input type="file" name="pic" id="img"><br>
 	說明:<input type="text" name="note"><br>
 	相簿:
@@ -35,7 +35,9 @@
 	<input type="submit" value="上傳">
 </form>
 
-<a href="album.php">查看相簿</a>
+<a href="album1.php">查看相簿1</a><br>
+<a href="album2.php">查看相簿2</a><br>
+
 <!----縮放圖形----->
 
 
