@@ -22,7 +22,14 @@ function all($table,...$arg){
     $sql=$sql . $arg[1];
   }
 
-  return $pdo->query($sql)->fetch();
+  // 指定fetchAll
+  if(!empty($arg[2])){
+    return $pdo->query($sql)->fetchAll($arg[2]);
+  }else{
+    return $pdo->query($sql)->fetchAll();
+  }
+
+  
 }
 
 

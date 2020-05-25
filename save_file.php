@@ -1,9 +1,10 @@
 <?php
 
+include_once "base.php"; 
+
 // $_FILES為二維陣列
 echo "<pre>"; print_r($_FILES); echo "</pre>";
 echo $_FILES['upload']['name'];
-date_default_timezone_set("Asia/Taipei");
 // name: 原本上傳的名字
 // type: 上傳格式
 // tmp_name: 暫存檔案
@@ -34,7 +35,7 @@ if($_FILES['upload']['error']==0){  // error=0 表示沒有發生錯誤
   }
 
   // 將上傳的檔名以時間命名+副檔名
-  $name=date("Ymdhis").$sub;
+  $name="img_".date("Ymdhis").$sub;
 
 
   // move_uploaded_file(原檔案,想要搬至的位置,): 更改上傳的地方
@@ -42,11 +43,18 @@ if($_FILES['upload']['error']==0){  // error=0 表示沒有發生錯誤
   // 將圖片上傳至同資料夾的"img"內，並將檔案重新命名成上傳時間
   move_uploaded_file($_FILES['upload']['tmp_name'],"img/".$name);
 
-  header("location:upload.php?filename=$name");
+  $data=[
+    'filename'=>$name,
+    'type'=>$_FILES['upload']['type'],
+    'note'=>$_POST['note'],
+    'album'=>$_POST['album'],
+    'path'=>'img/'.$name
+  ];
+  echo "<pre>";
+  print_r($data);
+  echo "</pre>";
+  save('file_info',$data);
+  header("location:manage.php?");
+
 }
-
 ?>
-
-<!-- 雖然有抓到檔案(右鍵原始檔看)，但是副檔名為tmp，因此不會顯示 -->
-<!-- <img src="<?=$_FILES['upload']['tmp_name'];?>" alt=""> -->
-<!-- <img src="img/<?=$_FILES['upload']['name'];?>" alt=""> -->

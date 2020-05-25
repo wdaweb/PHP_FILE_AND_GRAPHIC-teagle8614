@@ -1,32 +1,56 @@
 *{
-    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
-    font-size:16px;
-    padding:0;
-    margin:0;
-    list-style-type: none;
-    box-sizing: border-box;
-    text-decoration: none;
+	font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+	font-size:16px;
+	padding:0;
+	margin:0;
+	list-style-type: none;
+	box-sizing: border-box;
+	text-decoration: none;
 }
 .types{
-    width:400px;
-    margin:20px auto;
-    padding:10px;
-    height:100px;
-    border:1px solid #999;
-    border-radius:50px;
-    box-shadow: 2px 2px 5px #ccc;
-    text-align: center;
-    line-height:80px;
-    font-size:30px;
+	width:400px;
+	margin:20px auto;
+	padding:10px;
+	height:100px;
+	border:1px solid #999;
+	border-radius:50px;
+	box-shadow: 2px 2px 5px #ccc;
+	text-align: center;
+	line-height:80px;
+	font-size:30px;
 
 }
 .types:hover{
-    border:2px solid blue;
-    background:lightcyan;
+	border:2px solid blue;
+	background:lightcyan;
 }
 .header{
-    margin:10px auto;
-    padding:10px;
-    text-align: center;
-    font-size:32px;
+	margin:10px auto;
+	padding:10px;
+	text-align: center;
+	font-size:32px;
+}
+
+/* ------------------------- */
+table{
+	border-collapse: collapse;
+	padding: 10px;
+}
+table td{
+	border: 1px solid #ddd;
+	padding: 5px 10px;
+	text-align: center;
+}
+.btn{
+	display: inline-block;
+	padding: 5px 15px;
+	color: #fff;
+	background-color: orange;
+	margin:0 5px;
+	border-radius: 5px;
+	border: 1px solid orange;
+}
+.btn:hover{
+	color: orange;
+	background-color: #fff;
 }
