@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2020-05-22 09:34:26
+-- 產生時間： 2020-05-25 10:33:00
 -- 伺服器版本： 10.4.11-MariaDB
 -- PHP 版本： 7.4.3
 
@@ -47,7 +47,13 @@ INSERT INTO `file_info` (`id`, `filename`, `type`, `note`, `path`, `album`, `upl
 (6, 'img_20200522011351.jpg', 'image/jpeg', '貓貓貓', 'img/img_20200522011351.jpg', 1, '2020-05-22 05:13:51'),
 (7, 'img_20200522143717.jpg', 'image/jpeg', '箱貓2', 'img/img_20200522143717.jpg', 2, '2020-05-22 06:07:00'),
 (8, 'img_20200522150057.jpg', 'image/jpeg', '金針花123132', 'img/img_20200522150057.jpg', 2, '2020-05-22 06:07:12'),
-(9, 'img_20200522031221.jpg', 'image/jpeg', '花花', 'img/img_20200522031221.jpg', 3, '2020-05-22 07:12:21');
+(9, 'img_20200522160819.jpg', 'image/jpeg', '花花', 'img/img_20200522160819.jpg', 3, '2020-05-22 07:12:21'),
+(12, 'thumb_20200525025538.jpg', 'image/jpeg', 'fish', 'img/thumb_20200525025538.jpg', 2, '2020-05-25 06:55:38'),
+(13, 'thumb_20200525032806.jpg', 'image/jpeg', '擷取中間test', 'img/thumb_20200525032806.jpg', 3, '2020-05-25 07:28:06'),
+(15, 'thumb_20200525033149.jpg', 'image/jpeg', '擷取中間test2', 'img/thumb_20200525033149.jpg', 1, '2020-05-25 07:31:49'),
+(16, 'thumb_20200525034643.jpg', 'image/jpeg', '白邊', 'img/thumb_20200525034643.jpg', 1, '2020-05-25 07:46:43'),
+(17, 'thumb_20200525034721.jpg', 'image/jpeg', '白邊', 'img/thumb_20200525034721.jpg', 1, '2020-05-25 07:47:21'),
+(18, 'thumb_20200525035053.jpg', 'image/jpeg', '白邊2', 'img/thumb_20200525035053.jpg', 2, '2020-05-25 07:50:53');
 
 --
 -- 已傾印資料表的索引
@@ -67,7 +73,7 @@ ALTER TABLE `file_info`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `file_info`
 --
 ALTER TABLE `file_info`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
